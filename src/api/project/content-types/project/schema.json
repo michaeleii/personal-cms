@@ -16,8 +16,18 @@
       "type": "string",
       "required": true
     },
-    "Description": {
+    "description": {
       "type": "text",
+      "required": true
+    },
+    "technologies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::technology.technology",
+      "mappedBy": "projects"
+    },
+    "link": {
+      "type": "string",
       "required": true
     }
   }
